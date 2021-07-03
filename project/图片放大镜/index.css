@@ -1,0 +1,63 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+.app {
+    width: 1000px;
+    height: 600px;
+    position: relative;
+    top: 20px;
+    left: 20px;
+}
+
+.big-pic {
+    width: 100%;
+    height: 100%;
+    background: url('./img/1.jpg') no-repeat top left;
+    /* background-image: url('./img/1.jpg') no-repeat top left; */
+    background-size: 100% 100%;
+    cursor: move;
+}
+
+.big-pic .move {
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 200px;
+    height: 200px;
+    background: rgba(0, 0, 255, 0.15);
+    display: none;
+}
+
+.big-pic .bigPic {
+    width: 600px;
+    height: 600px;
+    position: absolute;
+    left: 1020px;
+    top: 0;
+    background: url('./img/1.jpg') no-repeat top left;
+    background-position: 0 0;
+    background-size: 500% 300%;
+    display: none;
+}
+
+.imgList {
+    width: 600px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 10px;
+}
+
+.small-img {
+    width: 110px;
+}
+
+.small-img img.active {
+    border: 2px solid red;
+}
+
+.small-img img {
+    width: 100%;
+}

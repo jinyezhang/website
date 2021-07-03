@@ -88,14 +88,14 @@
 .content {
     position: relative;
     width: 100%;
-    height: 800px;
+    height: 850px;
     margin-top: 80px;
 }
 
 #swiper {
     position: relative;
     width: 100%;
-    height: 800px;
+    height: 850px;
 }
 
 @media screen and (max-width:900px) {
@@ -156,6 +156,10 @@
     margin: 40px 20px;
     padding: 20px 10px;
     border: 1px solid #ddd;
+}
+
+.project .list .item a {
+    color: #222;
 }
 
 .project .list .item img {
@@ -235,18 +239,45 @@
 .footer {
     position: relative;
     width: 100%;
-    height: 500px;
-    background: url('./img/bottom.jpg') no-repeat;
-    background-size: 100% 100%;
-    background-position: center;
+    height: 250px;
+    background-color: rgba(59, 59, 59, 1);
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+    box-sizing: border-box;
 }
 
-.footer::after {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.5);
+.footer>div {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+}
+
+.footer>div>div {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    color: #fff;
+}
+
+.footer>div:first-child {
+    flex: 2;
+    flex-direction: row;
+}
+
+.footer>div>div>img {
+    width: 150px;
+    border-radius: 10px;
+}
+
+.footer>div>div>a {
+    line-height: 50px;
+    color: #fff;
+}
+
+.footer>div>div>p {
+    line-height: 26px;
 }
