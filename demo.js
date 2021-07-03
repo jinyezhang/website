@@ -7,6 +7,11 @@ init();
 function bindEvent() {
     var bite = $('#swiper').width() / $('#swiper').height();
     console.log(bite);
+    var height = $('#swiper').width() / bite;
+    $('#swiper').css({ height: height + 'px' });
+    $('.content').css({ height: height + 'px' });
+    $('.img-box').css({ height: height + 'px' });
+    $('.img-box li img').css({ height: height + 'px' });
     $('.btn').hover(function() {
         $('.header ul.list').show();
     })
@@ -16,9 +21,12 @@ function bindEvent() {
         }
     });
     $(window).on('resize', function() {
+        console.log(bite);
         var height = $('#swiper').width() / bite;
         $('#swiper').css({ height: height + 'px' });
         $('.content').css({ height: height + 'px' });
+        $('.img-box').css({ height: height + 'px' });
+        $('.img-box li img').css({ height: height + 'px' });
         if (window.innerWidth > 700) {
             $('.header ul.list').show();
         }
@@ -33,7 +41,7 @@ function bindEvent() {
 
 function swiper() {
     $('#swiper').sliderImg({
-        image: ['./img/1.jpg', './img/2.jpg', './img/3.jpg'],
-        href: ['#', '#', '#']
+        image: ['./img/1.jpg', './img/2.jpg', './img/3.jpg', './img/4.jpg'],
+        href: ['#', '#', '#', '#']
     });
 }

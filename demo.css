@@ -5,6 +5,12 @@
     text-decoration: none;
 }
 
+html,
+body {
+    width: 100%;
+    width: 100vw;
+}
+
 .header {
     position: fixed;
     top: 0;
@@ -18,7 +24,8 @@
 
 .header .nav {
     position: relative;
-    width: 80%;
+    width: 86%;
+    width: 86vw;
     margin: 0 auto;
     height: 100%;
 }
@@ -38,7 +45,7 @@
 }
 
 .header .nav ul.list {
-    display: block;
+    /* display: block; */
     float: right;
 }
 
@@ -128,6 +135,7 @@
 
 .project {
     width: 80%;
+    width: 80vw;
     margin: 50px auto;
 }
 
@@ -181,64 +189,13 @@
     margin-top: 6px;
 }
 
-@media screen and (max-width:1300px) {
-    .project .list .item {
-        width: 220px;
-        margin: 13px;
-    }
-}
-
-@media screen and (max-width: 900px) {
-    .project .list .item {
-        width: 250px;
-        margin: 10px;
-    }
-}
-
-@media screen and (max-width: 700px) {
-    .project .list .item {
-        width: 450px;
-        margin: 10px auto;
-    }
-}
-
-@media screen and (max-width:700px) {
-    .header .btn {
-        display: block;
-        position: absolute;
-        width: 50px;
-        height: 50px;
-        background: url('./img/btn.png') no-repeat;
-        background-size: 100% 100%;
-        cursor: pointer;
-        right: 20px;
-        top: 0;
-    }
-    /* 下拉菜单的样式  并在点击时显示*/
-    .header ul.list {
-        display: none;
-        width: 100%;
-        margin-top: 50px;
-        padding: 10px;
-        background-color: #eee;
-        /* z-index:99; */
-    }
-    .header .nav ul li {
-        display: block;
-        text-align: center;
-        border-bottom: 1px solid #fff;
-    }
-    .content {
-        height: auto;
-    }
-}
-
 
 /* footer */
 
 .footer {
     position: relative;
     width: 100%;
+    width: 100vw;
     height: 250px;
     background-color: rgba(59, 59, 59, 1);
     display: flex;
@@ -280,4 +237,95 @@
 
 .footer>div>div>p {
     line-height: 26px;
+}
+
+@media screen and (max-width:1300px) {
+    .project .list .item {
+        width: 220px;
+        margin: 13px;
+    }
+    .content {
+        height: 800px;
+    }
+    #swiper,
+    .img-box,
+    .img-box img {
+        height: 800px;
+    }
+}
+
+@media screen and (max-width: 900px) {
+    .project .list .item {
+        width: 250px;
+        margin: 10px;
+    }
+    .content {
+        height: 400px;
+    }
+    #swiper,
+    .img-box,
+    .img-box img {
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 700px) {
+    .project .list .item {
+        width: 90%;
+        margin: 10px auto;
+    }
+    html,
+    body {
+        overflow-x: hidden;
+    }
+}
+
+@media screen and (max-width:700px) {
+    .header .btn {
+        display: block;
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        background: url('./img/btn.png') no-repeat;
+        background-size: 100% 100%;
+        cursor: pointer;
+        right: 20px;
+        top: 0;
+    }
+    /* 下拉菜单的样式  并在点击时显示*/
+    .header ul.list {
+        display: none;
+        width: 100%;
+        margin-top: 50px;
+        padding: 10px;
+        background-color: #eee;
+        /* z-index:99; */
+    }
+    .header .nav ul li {
+        display: block;
+        text-align: center;
+        border-bottom: 1px solid #fff;
+    }
+    .content {
+        height: 200px;
+    }
+    #swiper,
+    .img-box,
+    .img-box img {
+        height: 200px;
+    }
+    .footer {
+        flex-direction: column;
+        height: 340px;
+    }
+    .footer>div {
+        flex: 1 !important;
+        width: 100% !important;
+    }
+    .footer>div:last-child {
+        height: 100px !important;
+    }
+    .footer>div>div>img {
+        width: 100px;
+    }
 }
